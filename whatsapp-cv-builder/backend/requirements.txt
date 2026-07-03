@@ -1,0 +1,29 @@
+# ---------------------------------------------------------------
+# backend/requirements.txt
+# WHY THIS FILE EXISTS:
+#   One place that lists every Python package the backend needs.
+#   Everyone on the team installs from this exact file so all
+#   five machines run identical versions (no "works on mine" bugs).
+#
+# HOW IT CONNECTS TO THE PROJECT:
+#   - Flask + flask-cors  -> the web server + lets React (port 5173)
+#                            call Flask (port 5000) without the browser
+#                            blocking it.
+#   - pymongo             -> how Python talks to MongoDB Atlas
+#                            (used by backend/db/).
+#   - openai              -> generates the CV summary
+#                            (used by backend/services/openai_service.py).
+#   - requests            -> how we POST messages to the Meta WhatsApp
+#                            Cloud API (used by whatsapp_service.py).
+#   - python-dotenv       -> loads secrets from backend/.env so keys
+#                            never sit in the code.
+#
+# Versions are pinned so nothing silently upgrades mid-hackathon.
+# ---------------------------------------------------------------
+
+Flask==3.0.3
+flask-cors==4.0.1
+pymongo==4.8.0
+openai==1.55.3
+requests==2.32.3
+python-dotenv==1.0.1
