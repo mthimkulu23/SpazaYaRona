@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------
+# .gitignore  (repo root)
+# WHY THIS FILE EXISTS:
+#   Tells git which files to NEVER track or push to GitHub.
+#   The most important line is ".env" — it holds our MongoDB
+#   password, OpenAI key, and WhatsApp token. If those reach
+#   GitHub, anyone on the internet can read them.
+#
+#   This file must exist BEFORE we create .env, so .env is
+#   ignored from the very first commit.
+# ---------------------------------------------------------------
+
+# --- Secrets: NEVER commit these ---
+.env
+backend/.env
+frontend/.env
+
+# --- Python ---
+venv/
+__pycache__/
+*.pyc
+
+# --- Node / React ---
+node_modules/
+frontend/dist/
+
+# --- VS Code ---
+.vscode/
+
+# --- OS junk ---
+Thumbs.db
+.DS_Store
